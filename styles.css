@@ -1,0 +1,244 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F1F0E8;
+  color: #4A4947;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Unlock Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+.overlay-content h1 {
+  font-family: 'Doto', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.overlay-content input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.overlay-content button {
+  background-color: #89A8B2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.overlay-content p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #4A4947;
+}
+
+/* Header */
+header {
+  background: #89A8B2;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+header p {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Timeline Section */
+.timeline {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.timeline-item {
+  background: #E5E1DA;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.timeline-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item p {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 0.9rem; /* Reduced font size for the text under the timeline pictures */
+  color: #4A4947;
+}
+
+/* Memory Roadmap Section */
+.memory-roadmap {
+  position: relative;
+  padding: 50px 20px;
+}
+
+.memory-roadmap:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #89A8B2;
+  transform: translateX(-50%);
+}
+
+.memory-box {
+  position: relative;
+  background: rgba(229, 225, 218, 0.8); /* Slightly transparent */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 250px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.memory-box:nth-child(odd) {
+  margin-left: calc(50% + 20px);
+}
+
+.memory-box:nth-child(even) {
+  margin-right: calc(50% + 20px);
+}
+
+.memory-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.memory-box p {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 0.9rem; /* Reduced font size for the text under the pictures */
+  color: #4A4947; /* Ensures the text color is readable */
+}
+
+/* Love Notes Section */
+.love-notes {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.notes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.note {
+  perspective: 1000px;
+}
+
+.note .inner {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.note:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.note .inner .front,
+.note .inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E5E1DA;
+  border-radius: 10px;
+}
+
+.note .inner .back {
+  transform: rotateY(180deg);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #89A8B2;
+  color: white;
+  margin-top: 30px;
+  padding: 10px 0;
+}
+
+footer p {
+  font-family: 'Lora', serif;
+}
